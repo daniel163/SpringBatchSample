@@ -26,15 +26,17 @@ public class JobLaunchTest {
 
 	@Before
 	public void setUp() throws Exception {
+		System.out.println("Before >>>>>>>>>");
 	}
 
 	@After
 	public void tearDown() throws Exception {
+		System.out.println("After >>>>>>>>>");
 	}
 	
 	@Test
 	public void billJob() throws Exception {
-		JobExecution result = jobLauncher.run(job, new JobParameters());          
-		System.out.println(result.toString());     
+		JobExecution result = jobLauncher.run(job, new JobParameters());
+		System.out.println(result.toString());
 	}
 }
